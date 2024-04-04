@@ -1,0 +1,5 @@
+streamlit
+matplotlib
+mplcursors
+plotly
+pandas
