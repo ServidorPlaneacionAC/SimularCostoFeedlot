@@ -4,6 +4,7 @@ import pandas as pd
 import mplcursors
 from plotly.subplots import make_subplots
 import plotly.graph_objs as go
+from Cargar_Datos import Cls_Cargar_Datos
 
 class Visualizacion_Formulario:
     '''
@@ -51,6 +52,8 @@ class Visualizacion_Formulario:
         if page == "Inicio":
             st.title("Bienvenido a la aplicación")
             st.write("Utilice el menú de la izquierda para navegar por la aplicación.")
+            carga=Cls_Cargar_Datos()
+            st.write(carga)
         elif page == "Ingresar información":
             st.title("Ingresar Información")
             num_input, text_input = self.ingresar_informacion()
