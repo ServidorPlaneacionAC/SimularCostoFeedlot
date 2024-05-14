@@ -6,7 +6,6 @@ class Cls_Cargar_Datos:
         self.DF = pd.DataFrame(self.InicializarDatos())
         self.definir_parametros
 
-    
     def InicializarDatos(self):
         # Datos proporcionados
         Datos = {
