@@ -50,10 +50,7 @@ class Visualizacion_Formulario:
         page = st.sidebar.radio("Ir a:", ["Inicio", "Ingresar información", "Ver DataFrame"])
 
         if page == "Inicio":
-            st.title("Bienvenido a la aplicación")
-            st.write("Utilice el menú de la izquierda para navegar por la aplicación.")
-            carga=Cls_Cargar_Datos()
-            st.write(carga.DF)
+            self.pag_inicio()
         elif page == "Ingresar información":
             st.title("Ingresar Información")
             num_input, text_input = self.ingresar_informacion()
@@ -64,4 +61,11 @@ class Visualizacion_Formulario:
             st.title("Ver DataFrame")
             st.write(self.df)
             self.descargar_df()
+            
+    def pag_inicio(self):
+        st.title("Bienvenido a la aplicación")
+        st.write("Utilice el menú de la izquierda para navegar por la aplicación.")
+        carga=Cls_Cargar_Datos()
+        st.write(carga.DF)
+
 
