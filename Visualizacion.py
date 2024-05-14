@@ -53,7 +53,7 @@ class Visualizacion_Formulario:
             st.title("Bienvenido a la aplicación")
             st.write("Utilice el menú de la izquierda para navegar por la aplicación.")
             carga=Cls_Cargar_Datos()
-            st.write(carga)
+            st.write(carga.DF)
         elif page == "Ingresar información":
             st.title("Ingresar Información")
             num_input, text_input = self.ingresar_informacion()
