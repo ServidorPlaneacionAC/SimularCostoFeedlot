@@ -5,6 +5,7 @@ import mplcursors
 from plotly.subplots import make_subplots
 import plotly.graph_objs as go
 from Cargar_Datos import Cls_Cargar_Datos
+from Transformacion import Cls_Transformacion
 
 class Visualizacion_Formulario:
     '''
@@ -72,6 +73,9 @@ class Visualizacion_Formulario:
         with columna2:
             carga.definir_parametros("1")
         st.write(carga.DF)
+        
+        transformacion=Cls_Transformacion(carga.DF)
+
 
 
 
