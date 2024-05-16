@@ -72,9 +72,10 @@ class Visualizacion_Formulario:
             carga.definir_parametros("BL")
         with columna2:
             carga.definir_parametros("Esc1")
-        st.write(carga.DF)
+        st.write(carga.BL)
+        st.write(carga.Esc1)
         
-        transformacion=Cls_Transformacion(carga.DF)
+        transformacion=Cls_Transformacion(carga.BL, carga.Esc1)
 
 
 
