@@ -3,7 +3,8 @@ import streamlit as st
 
 class Cls_Cargar_Datos:
     def __init__(self):
-        self.DF = pd.DataFrame(self.InicializarDatos())
+        self.BL = pd.DataFrame(self.InicializarDatos())
+        self.Esc1 = pd.DataFrame(self.InicializarDatos())
 
 
     def InicializarDatos(self):
@@ -36,14 +37,25 @@ class Cls_Cargar_Datos:
             '% Animales Descartados': 5.0,
             '% Mortalidad': 1.0
         }
-
+        if escenario=='BL':
         # Input boxes para las variables con valores predeterminados
-        self.DF[f'{escenario} Inventario Reses'] = st.number_input(f'{escenario} Inventario Reses', min_value=0, step=1, value=default_values['Inventario Reses'])
-        self.DF[f'{escenario} Numero de Reses Salida'] = st.number_input(f'{escenario} Numero de Reses Salida', min_value=0, step=1, value=default_values['Numero de Reses Salida'])
-        self.DF[f'{escenario} Tiempo permanencia (días)'] = st.number_input(f'{escenario} Tiempo permanencia (días)', min_value=0.0, step=0.1, value=default_values['Tiempo permanencia'])
-        self.DF[f'{escenario} Peso Inicial (kg)'] = st.number_input(f'{escenario} Peso Inicial (kg)', min_value=0.0, step=0.1, value=default_values['Peso Inicial'])
-        self.DF[f'{escenario} Precio Res Flaca Kg ($)'] = st.number_input(f'{escenario} Precio Res Flaca Kg ($)', min_value=0.0, step=0.1, value=default_values['Precio Res Flaca Kg'])
-        self.DF[f'{escenario} Precio Res Flaca ($)'] = st.number_input(f'{escenario} Precio Res Flaca ($)', min_value=0.0, step=0.1, value=default_values['Precio Res Flaca'])
-        self.DF[f'{escenario} % Animales Descartados'] = st.number_input(f'{escenario} % Animales Descartados', min_value=0.0, step=0.1, format="%.2f", value=default_values['% Animales Descartados'])
-        self.DF[f'{escenario} % Mortalidad'] = st.number_input(f'{escenario} % Mortalidad', min_value=0.0, step=0.1, format="%.2f", value=default_values['% Mortalidad'])
+            self.BL[f'Inventario Reses'] = st.number_input(f'{escenario} Inventario Reses', min_value=0, step=1, value=default_values['Inventario Reses'])
+            self.BL[f'Numero de Reses Salida'] = st.number_input(f'{escenario} Numero de Reses Salida', min_value=0, step=1, value=default_values['Numero de Reses Salida'])
+            self.BL[f'Tiempo permanencia (días)'] = st.number_input(f'{escenario} Tiempo permanencia (días)', min_value=0.0, step=0.1, value=default_values['Tiempo permanencia'])
+            self.BL[f'Peso Inicial (kg)'] = st.number_input(f'{escenario} Peso Inicial (kg)', min_value=0.0, step=0.1, value=default_values['Peso Inicial'])
+            self.BL[f'Precio Res Flaca Kg ($)'] = st.number_input(f'{escenario} Precio Res Flaca Kg ($)', min_value=0.0, step=0.1, value=default_values['Precio Res Flaca Kg'])
+            self.BL[f'Precio Res Flaca ($)'] = st.number_input(f'{escenario} Precio Res Flaca ($)', min_value=0.0, step=0.1, value=default_values['Precio Res Flaca'])
+            self.BL[f'% Animales Descartados'] = st.number_input(f'{escenario} % Animales Descartados', min_value=0.0, step=0.1, format="%.2f", value=default_values['% Animales Descartados'])
+            self.BL[f'% Mortalidad'] = st.number_input(f'{escenario} % Mortalidad', min_value=0.0, step=0.1, format="%.2f", value=default_values['% Mortalidad'])
+        else:
+            self.Esc1[f'Inventario Reses'] = st.number_input(f'{escenario} Inventario Reses', min_value=0, step=1, value=default_values['Inventario Reses'])
+            self.Esc1[f'Inventario Reses'] = st.number_input(f'{escenario} Inventario Reses', min_value=0, step=1, value=default_values['Inventario Reses'])
+            self.Esc1[f'Numero de Reses Salida'] = st.number_input(f'{escenario} Numero de Reses Salida', min_value=0, step=1, value=default_values['Numero de Reses Salida'])
+            self.Esc1[f'Tiempo permanencia (días)'] = st.number_input(f'{escenario} Tiempo permanencia (días)', min_value=0.0, step=0.1, value=default_values['Tiempo permanencia'])
+            self.Esc1[f'Peso Inicial (kg)'] = st.number_input(f'{escenario} Peso Inicial (kg)', min_value=0.0, step=0.1, value=default_values['Peso Inicial'])
+            self.Esc1[f'Precio Res Flaca Kg ($)'] = st.number_input(f'{escenario} Precio Res Flaca Kg ($)', min_value=0.0, step=0.1, value=default_values['Precio Res Flaca Kg'])
+            self.Esc1[f'Precio Res Flaca ($)'] = st.number_input(f'{escenario} Precio Res Flaca ($)', min_value=0.0, step=0.1, value=default_values['Precio Res Flaca'])
+            self.Esc1[f'% Animales Descartados'] = st.number_input(f'{escenario} % Animales Descartados', min_value=0.0, step=0.1, format="%.2f", value=default_values['% Animales Descartados'])
+            self.Esc1[f'% Mortalidad'] = st.number_input(f'{escenario} % Mortalidad', min_value=0.0, step=0.1, format="%.2f", value=default_values['% Mortalidad'])
+        
 
