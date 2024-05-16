@@ -5,9 +5,5 @@ class Cls_Transformacion:
         self.BL = BL
         self.Esc1 = Esc1
     
-    def Costo_Fijos(self):
-        dic_fijos={
-            'Fijos Alimento Res':1,
-            'Fijos Producción Res': 1}
-
-    
+    def Costo_Fijos(self,escenario):
+        escenario['Fijos Alimento Res']=1
