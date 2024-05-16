@@ -68,9 +68,9 @@ class Visualizacion_Formulario:
         carga=Cls_Cargar_Datos()
         columna1, columna2 = st.columns(2)
         with columna1:
-            carga.definir_parametros("1")
+            carga.definir_parametros("")
         with columna2:
-            carga.definir_parametros("2")
+            carga.definir_parametros("1")
         st.write(carga.DF)
 
 
