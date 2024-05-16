@@ -3,8 +3,8 @@ import streamlit as st
 
 class Cls_Cargar_Datos:
     def __init__(self):
-        self.BL = pd.DataFrame(self.InicializarDatos())
-        self.Esc1 = pd.DataFrame(self.InicializarDatos())
+        self.BL = self.InicializarDatos()
+        self.Esc1 = self.InicializarDatos()
 
 
     def InicializarDatos(self):
