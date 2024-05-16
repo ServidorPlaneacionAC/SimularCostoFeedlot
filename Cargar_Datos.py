@@ -38,7 +38,7 @@ class Cls_Cargar_Datos:
         }
 
         # Input boxes para las variables con valores predeterminados
-        self.DF[f'{escenario} Inventario Reses'] = st.number_input(f'{escenario} Inventario Reses', min_value=0, step=1, value=default_values['Numero de Reses Salida'])
+        self.DF[f'{escenario} Inventario Reses'] = st.number_input(f'{escenario} Inventario Reses', min_value=0, step=1, value=default_values['Inventario Reses'])
         self.DF[f'{escenario} Numero de Reses Salida'] = st.number_input(f'{escenario} Numero de Reses Salida', min_value=0, step=1, value=default_values['Numero de Reses Salida'])
         self.DF[f'{escenario} Tiempo permanencia (días)'] = st.number_input(f'{escenario} Tiempo permanencia (días)', min_value=0.0, step=0.1, value=default_values['Tiempo permanencia'])
         self.DF[f'{escenario} Peso Inicial (kg)'] = st.number_input(f'{escenario} Peso Inicial (kg)', min_value=0.0, step=0.1, value=default_values['Peso Inicial'])
