@@ -6,4 +6,4 @@ class Cls_Transformacion:
         self.Esc1 = Esc1
     
     def Costo_Fijos(self,escenario):
-        escenario['Fijos Alimento Res']=1
+        escenario['Fijos Alimento Res']=escenario['Fijos Alimento Mes']/escenario['Inventario Reses']
