@@ -66,6 +66,12 @@ class Visualizacion_Formulario:
         st.title("Bienvenido a la aplicación")
         st.write("Utilice el menú de la izquierda para navegar por la aplicación.")
         carga=Cls_Cargar_Datos()
+        columna1, columna2 = st.columns(2)
+        with columna1:
+            carga.definir_parametros("1")
+        with columna2:
+            carga.definir_parametros("2")
         st.write(carga.DF)
+
 
 

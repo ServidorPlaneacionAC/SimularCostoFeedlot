@@ -4,7 +4,7 @@ import streamlit as st
 class Cls_Cargar_Datos:
     def __init__(self):
         self.DF = pd.DataFrame(self.InicializarDatos())
-        self.definir_parametros(escenario="")
+
 
     def InicializarDatos(self):
         # Datos proporcionados
